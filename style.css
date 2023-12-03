@@ -8,28 +8,30 @@
   box-sizing: border-box;
 }
 
-img, picture, svg {
+#dock .icon {
   max-width: 100%;
   display: block;
 }
 
+
 body {
-  background-image: url(https://9to5google.com/wp-content/uploads/sites/4/2017/02/chromeos_newdefaultwall_1-e1487111985183.png);
+  /*background-image: url(https://9to5google.com/wp-content/uploads/sites/4/2017/02/chromeos_newdefaultwall_1-e1487111985183.png);*/
   margin: 0;
 }
 
 #dock {
+  position: sticky;
   width: 100%;
   font-family: Roboto, sans-serif;
   display: flex;
   flex-direction: row;
   user-select: none;
-  background-color: rgba(228, 229, 235, 0.75);
+  background-color: rgba(213, 214, 219, 0.75);
   backdrop-filter: blur(4px);
-  position: absolute;
   bottom: 0;
   border-radius: 30px 30px 0 0;
   padding: 8px 8px 7px 8px;
+  z-index: 10;
 }
 
 #info {
@@ -38,12 +40,17 @@ body {
   justify-content: flex-end;
 }
 
-.button {
-  background-color: rgba(237, 235, 248, .85);
+#dock .button {
+  background-color: rgba(244, 243, 251, 0.85);
   padding: 10px 10px;
   cursor: pointer;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.8)
+}
+
+#info .button {
+  display: flex;
+  align-items: center;
 }
 
 #info .button:first-child {
@@ -58,7 +65,7 @@ body {
 }
 
 #openBtn {
-  padding: 7px;
+  padding: 9px;
   border-radius: 22px;
   display: flex;
   flex-grow: 0;
